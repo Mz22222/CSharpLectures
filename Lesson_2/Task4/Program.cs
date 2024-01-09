@@ -3,6 +3,7 @@
 Определить вес самой тяжелой гири.
 */
 
+// вариант решения данной задачи с помощью цикла while
 int N = 5;
 int[] array = { 14, -4, -57, 3, 9 };
 int i = 0;
@@ -16,15 +17,28 @@ while (i < N)
     }
     i = i + 1;
 }
-Console.Write(max);
+Console.WriteLine(max);
 
 
-/* решение данной задачи с помощью цикла for
-
-int[] arr = { 1,2,3,4,5};
-fir(int i = 1; i < arr.Length; i = i + 1)
+// вариант решения данной задачи с помощью цикла for
+max = array[0];
+for(int j = 1; j < array.Length; j++)
 {
-    Console.Write($"{arr[i]} ");
+     if (array[j] > max)
+    {
+        max = array[j];
+    }
 }
+Console.WriteLine(max);
 
- */
+
+// вариант решения данной задачи с помощью цикла foreach
+max = array[0];
+foreach (int е in array) //обращение по индексу в этом цикле уже не используется  
+{
+      if (е > max)
+    {
+        max = е;
+    }
+}
+Console.WriteLine(max);
