@@ -26,5 +26,5 @@ double CalculateFormula(int a, int b, int c, int d) // переводится к
 
 double result = CalculateFormula(1, 2, 3, 4);
 
-
 Console.Write(result);
+
