@@ -7,15 +7,23 @@
  0! = 1
 */
 
-using System.Collections.ObjectModel;
+
 
 int Fact(int n)
 {
     if (n == 1 || n == 0) // || -  или 
     {
+        Console.WriteLine($"Stop reqursion: n = {n}");
         return 1; // вернем 1 т.к. 1! равен 1
     }
+    Console.WriteLine(n);
     return n * Fact(n - 1);
+  
 }
 
-Console.Write(Fact(0));
+Console.Write(Fact(5));
+
+// Отладка:
+// F11 шаг с заходом
+// F10 шаг с обходом
+// F5 продолжить (до следующей точки )
